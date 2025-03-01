@@ -1,0 +1,20 @@
+use std::io;
+
+fn main() {
+    let mut string_a = String::new();
+    let mut string_b = String::new();
+
+    let _ = io::stdin()
+        .read_line(&mut string_a)
+        .expect("falha ao ler kkk");
+    let _ = io::stdin()
+        .read_line(&mut string_b)
+        .expect("falha ao ler kk");
+
+    let a: i32 = string_a.trim().parse().expect("Not a number!");
+    let b: i32 = string_b.trim().parse().expect("Not a number!");
+
+    let resultado = a+b;
+
+    println!("X = {}", resultado);
+}
