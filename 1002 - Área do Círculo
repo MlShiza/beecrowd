@@ -1,0 +1,16 @@
+use std::io;
+
+fn main() {
+    let mut buffer = String::new();
+
+    let _ = io::stdin()
+        .read_line(&mut buffer)
+        .expect("Could not read stdin");
+
+    let raio: f64 = buffer.trim().parse().expect("Could not parse raio");
+
+    let area = 3.14159 * raio * raio;
+
+    println!("A={:.4}", area);
+
+}
