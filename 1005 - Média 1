@@ -1,0 +1,20 @@
+use std::io;
+
+fn main() {
+
+    let mut buffer_a = String::new();
+    let mut buffer_b = String::new();
+
+    let _ = io::stdin()
+        .read_line(&mut buffer_a)
+        .expect("Failed to read line");
+    let _ = io::stdin()
+        .read_line(&mut buffer_b)
+        .expect("Failed to read line");
+
+    let a: f64 = buffer_a.trim().parse().expect("Please type a number!");
+    let b: f64 = buffer_b.trim().parse().expect("Please type a number!");
+
+    let media_final = (3.5 * a + 7.5 *b)/ 11f64;
+    println!("MEDIA = {:.5}" ,media_final);
+}
